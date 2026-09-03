@@ -3,395 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OR D'EAU FRAGRANCES - عطور فاخرة</title>
-    <!-- خطوط جوجل للحصول على مظهر احترافي -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    <!-- أيقونات FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <title>متجر العطور الفاخرة</title>
     <style>
-        /* الألوان الأساسية للموقع */
-        :root {
-            --gold-primary: #d4af37;
-            --gold-dark: #aa8c2c;
-            --black-bg: #0a0a0a;
-            --gray-bg: #1a1a1a;
-            --text-light: #f5f5f5;
-            --text-muted: #a0a0a0;
-        }
-
-        * {
+        /* إعدادات عامة للصفحة */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
         }
-
-        body {
-            font-family: 'Cairo', sans-serif;
-            background-color: var(--black-bg);
-            color: var(--text-light);
-            line-height: 1.7;
-        }
-
-        /* شريط الإعلانات العلوي */
-        .top-bar {
-            background-color: var(--gold-primary);
-            color: #000;
-            text-align: center;
-            padding: 10px;
-            font-weight: 800;
-            font-size: 14px;
-            letter-spacing: 1px;
-        }
-
-        /* القائمة الرئيسية */
+        
+        /* تصميم الهيدر (الفوق ديال الموقع) */
         header {
-            background-color: rgba(10, 10, 10, 0.95);
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #333;
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 28px;
-            color: var(--gold-primary);
-            text-decoration: none;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-
-        /* القسم الرئيسي (Hero Section) */
-        .hero {
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            background-color: #1a252f;
+            color: white;
             text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=2000&auto=format&fit=crop') center/cover;
+            padding: 25px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 10px 0 0 0;
+            color: #bdc3c7;
+        }
+
+        /* حاوية المنتجات (باش يجيو حدا بعضياتهم) */
+        .products-container {
+            max-width: 1200px;
+            margin: 40px auto;
             padding: 0 20px;
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            color: var(--gold-primary);
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin-bottom: 30px;
-            color: var(--text-light);
-        }
-
-        .btn-main {
-            background-color: var(--gold-primary);
-            color: #000;
-            padding: 15px 40px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 18px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-        }
-
-        .btn-main:hover {
-            background-color: var(--gold-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
-        }
-
-        /* قسم المميزات */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            padding: 80px 5%;
-            background-color: var(--gray-bg);
-            text-align: center;
-        }
-
-        .feature-card {
-            padding: 30px;
-            border: 1px solid #333;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
-
-        .feature-card:hover {
-            border-color: var(--gold-primary);
-            transform: translateY(-5px);
-        }
-
-        .feature-card i {
-            font-size: 40px;
-            color: var(--gold-primary);
-            margin-bottom: 20px;
-        }
-
-        .feature-card h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        /* قسم المنتجات (للتجارة الإلكترونية) */
-        .products-section {
-            padding: 80px 5%;
-        }
-
-        .section-title {
-            text-align: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--gold-primary);
-            margin-bottom: 50px;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .product-card {
-            background-color: var(--gray-bg);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid #222;
-        }
-
-        .product-image {
-            width: 100%;
-            height: 300px;
-            background-color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 50px;
-            color: #555;
-        }
-
-        .product-info {
-            padding: 25px;
-            text-align: center;
-        }
-
-        .product-title {
-            font-size: 22px;
-            margin-bottom: 10px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .product-price {
-            color: var(--gold-primary);
-            font-size: 24px;
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
-
-        .btn-buy {
-            display: block;
-            width: 100%;
-            background-color: transparent;
-            color: var(--gold-primary);
-            border: 2px solid var(--gold-primary);
-            padding: 12px;
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-
-        .btn-buy:hover {
-            background-color: var(--gold-primary);
-            color: #000;
-        }
-
-        /* الفوتر (أسفل الموقع) */
-        footer {
-            background-color: #050505;
-            padding: 50px 5% 20px;
-            border-top: 1px solid #222;
-        }
-
-        .footer-content {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            color: var(--gold-primary);
-            margin-bottom: 15px;
-        }
-
-        .footer-contact p {
-            color: var(--text-muted);
-            margin-bottom: 10px;
-        }
-
-        .footer-contact i {
-            color: var(--gold-primary);
-            margin-left: 10px;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #222;
-            color: var(--text-muted);
-            font-size: 14px;
-        }
-
-        /* زر الواتساب العائم */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            background-color: #25d366;
-            color: white;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
             justify-content: center;
-            align-items: center;
-            font-size: 35px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
-            text-decoration: none;
-            transition: 0.3s;
+            gap: 30px;
         }
 
-        .whatsapp-float:hover {
-            transform: scale(1.1);
+        /* الكارطة ديال كل عطر */
+        .product-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            width: 320px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
         }
 
-        /* التجاوب مع شاشات الهواتف */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .hero p { font-size: 1rem; }
-            .section-title { font-size: 2rem; }
+        /* تصميم التصويرة */
+        .product-image {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-bottom: 2px solid #f9f9f9;
+        }
+
+        /* المعلومات ديال العطر الثمن والسمية */
+        .product-info {
+            padding: 25px 20px;
+        }
+        .product-title {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+        .product-price {
+            color: #e74c3c;
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* زر الطلب */
+        .buy-button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .buy-button:hover {
+            background-color: #219150;
         }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        <i class="fa-solid fa-truck-fast"></i> التوصيل متوفر لجميع مدن المغرب الدفع عند الاستلام
-    </div>
-
     <header>
-        <a href="#" class="logo">OR D'EAU</a>
+        <h1>متجر العطور الفاخرة</h1>
+        <p>أفضل العطور الأصلية بأثمنة مناسبة - التوصيل متوفر</p>
     </header>
 
-    <section class="hero">
-        <h1>OR D'EAU FRAGRANCES</h1>
-        <p>اكتشف مجموعتنا الحصرية من العطور الفاخرة. روائح تدوم طويلاً وتترك انطباعاً لا يُنسى.</p>
-        <a href="#products" class="btn-main">اكتشف المجموعة</a>
-    </section>
-
-    <section class="features">
-        <div class="feature-card">
-            <i class="fa-solid fa-gem"></i>
-            <h3>جودة ممتازة</h3>
-            <p>مكونات أصلية ومختارة بعناية لضمان أفضل تجربة عطرية.</p>
-        </div>
-        <div class="feature-card">
-            <i class="fa-solid fa-clock"></i>
-            <h3>ثبات طويل</h3>
-            <p>عطور مصممة لتدوم طوال اليوم وترافقك في كل لحظاتك.</p>
-        </div>
-        <div class="feature-card">
-            <i class="fa-solid fa-handshake"></i>
-            <h3>الدفع عند الاستلام</h3>
-            <p>تسوق بكل أمان، لا تدفع حتى تتوصل بطلبك بين يديك.</p>
-        </div>
-    </section>
-
-    <section id="products" class="products-section">
-        <h2 class="section-title">الأكثر مبيعاً</h2>
-        <div class="products-grid">
-            <!-- المنتج الأول -->
-            <div class="product-card">
-                <div class="product-image">
-                    <i class="fa-solid fa-bottle-droplet"></i>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">عطر Royal Gold</h3>
-                    <p class="product-price">299 درهم</p>
-                    <a href="https://wa.me/212775754315?text=بغيت%20نطلب%20عطر%20Royal%20Gold" target="_blank" class="btn-buy">
-                        <i class="fa-brands fa-whatsapp"></i> اطلب الآن
-                    </a>
-                </div>
-            </div>
-            
-            <!-- المنتج الثاني -->
-            <div class="product-card">
-                <div class="product-image">
-                    <i class="fa-solid fa-spray-can"></i>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">عطر Oud Majestic</h3>
-                    <p class="product-price">349 درهم</p>
-                    <a href="https://wa.me/212775754315?text=بغيت%20نطلب%20عطر%20Oud%20Majestic" target="_blank" class="btn-buy">
-                        <i class="fa-brands fa-whatsapp"></i> اطلب الآن
-                    </a>
-                </div>
-            </div>
-
-            <!-- المنتج الثالث -->
-            <div class="product-card">
-                <div class="product-image">
-                    <i class="fa-solid fa-flask"></i>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">عطر Midnight Amber</h3>
-                    <p class="product-price">250 درهم</p>
-                    <a href="https://wa.me/212775754315?text=بغيت%20نطلب%20عطر%20Midnight%20Amber" target="_blank" class="btn-buy">
-                        <i class="fa-brands fa-whatsapp"></i> اطلب الآن
-                    </a>
-                </div>
+    <div class="products-container">
+        
+        <!-- العطر الأول -->
+        <div class="product-card">
+            <img src="perfume1.jpeg" alt="عطر الأناقة" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">عطر الأناقة</h3>
+                <div class="product-price">199 درهم</div>
+                <button class="buy-button">اطلب الآن</button>
             </div>
         </div>
-    </section>
 
-    <footer>
-        <div class="footer-content">
-            <div>
-                <div class="footer-logo">OR D'EAU</div>
-                <p style="color: var(--text-muted); max-width: 300px;">وجهتك الأولى للعطور الفاخرة. نضمن لك الجودة والتميز في كل قطرة.</p>
-            </div>
-            <div class="footer-contact">
-                <h3 style="color: white; margin-bottom: 20px;">تواصل معنا</h3>
-                <p><i class="fa-solid fa-phone"></i> +212 775 754 315</p>
-                <p><i class="fa-solid fa-location-dot"></i> التوصيل لجميع المدن</p>
+        <!-- العطر الثاني -->
+        <div class="product-card">
+            <img src="perfume2.jpeg" alt="عطر الجاذبية" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">عطر الجاذبية</h3>
+                <div class="product-price">249 درهم</div>
+                <button class="buy-button">اطلب الآن</button>
             </div>
         </div>
-        <div class="copyright">
-            &copy; 2026 OR D'EAU FRAGRANCES. جميع الحقوق محفوظة.
-        </div>
-    </footer>
 
-    <!-- أيقونة الواتساب للتواصل السريع -->
-    <a href="https://wa.me/212775754315" class="whatsapp-float" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+        <!-- العطر الثالث -->
+        <div class="product-card">
+            <img src="perfume3.jpeg" alt="عطر الفخامة" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">عطر الفخامة</h3>
+                <div class="product-price">299 درهم</div>
+                <button class="buy-button">اطلب الآن</button>
+            </div>
+        </div>
+
+    </div>
 
 </body>
 </html>
