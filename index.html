@@ -4,58 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Or d'eau FRAGRANCES | متجر العطور الفاخرة</title>
+    <!-- استدعاء أيقونات FontAwesome للأيقونة ديال الواتساب -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        /* خلفية الصفحة بالأزرق الملكي الفاخر */
         body {
             margin: 0;
             padding: 0;
-            background-color: #f4f6f9;
-            color: #1a1a1a;
+            background-color: #071326; /* أزرق ملكي داكن جاد وفخم */
+            color: #ffffff;
         }
         
-        /* الهيدر والألوان الأساسية */
+        /* الهيدر */
         .header {
-            background-color: #0b1d3a; /* الأزرق الملكي */
-            color: #D4AF37; /* الذهبي */
-            padding: 30px 20px;
+            background: linear-gradient(135deg, #0b1d3a, #040c1a);
+            color: #D4AF37; /* ذهبي */
+            padding: 35px 20px;
             text-align: center;
-            border-bottom: 5px solid #8B0000; /* لمسة بالأحمر */
+            border-bottom: 4px solid #D4AF37;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
         .header h1 {
             margin: 10px 0 5px 0;
-            font-size: 32px;
-            letter-spacing: 1px;
+            font-size: 34px;
+            letter-spacing: 1.5px;
+            text-shadow: 1px 1px 3px #000;
         }
         .header p {
-            color: #ffffff;
+            color: #e0e0e0;
             font-size: 16px;
             margin: 0;
         }
 
-        /* قسم الترحيب */
+        /* قسم الترحيب بلمسة الأحمر والذهبي */
         .hero {
-            background-color: #ffffff;
+            background-color: #4a000d; /* أحمر نبيذي فاخر */
             border: 2px solid #D4AF37;
             padding: 25px;
             text-align: center;
-            margin: 20px auto;
+            margin: 25px auto;
             max-width: 900px;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
         }
         .hero h2 {
-            color: #0b1d3a;
+            color: #D4AF37;
             margin-top: 0;
         }
         .hero p {
-            color: #555;
-            line-height: 1.6;
+            color: #f0f0f0;
+            line-height: 1.7;
+            font-size: 16px;
         }
 
-        /* مميزات المتجر */
+        /* مميزات الشراء */
         .features {
             display: flex;
             flex-wrap: wrap;
@@ -66,30 +72,32 @@
             padding: 0 10px;
         }
         .feature-box {
-            background: #ffffff;
-            padding: 15px 20px;
+            background: #0b1d3a;
+            padding: 18px;
             border-radius: 8px;
             border: 1px solid #D4AF37;
+            border-top: 3px solid #8B0000; /* لمسة أحمر */
             text-align: center;
             flex: 1;
             min-width: 250px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
         .feature-box strong {
-            color: #0b1d3a;
+            color: #D4AF37;
             display: block;
             margin-bottom: 5px;
-            font-size: 16px;
+            font-size: 17px;
         }
 
         /* عنوان المعرض */
         .section-title {
-            color: #0b1d3a;
-            border-right: 6px solid #D4AF37;
+            color: #D4AF37;
+            border-right: 6px solid #8B0000; /* أحمر */
             padding-right: 15px;
             max-width: 1100px;
-            margin: 40px auto 20px auto;
-            font-size: 24px;
+            margin: 40px auto 25px auto;
+            font-size: 26px;
+            text-shadow: 1px 1px 2px #000;
         }
 
         /* شبكة المنتجات */
@@ -103,48 +111,51 @@
             padding: 0 10px;
         }
         .product-card {
-            background: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-top: 5px solid #0b1d3a;
+            background: linear-gradient(180deg, #0d2245 0%, #3a0009 100%); /* مزيج الأزرق الملكي والأحمر */
+            border: 1px solid #D4AF37;
             padding: 20px;
             text-align: center;
-            border-radius: 10px;
+            border-radius: 12px;
             width: 320px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .product-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-7px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
         }
         .product-card img {
             width: 100%;
             height: 260px;
-            object-fit: contain;
-            border-radius: 6px;
+            object-fit: cover;
+            border-radius: 8px;
             margin-bottom: 15px;
-            background-color: #fafafa;
+            border: 1px solid #D4AF37;
         }
         .product-card h3 {
-            color: #0b1d3a;
+            color: #ffffff;
             margin: 10px 0 5px 0;
-            font-size: 18px;
+            font-size: 20px;
         }
         .product-card .brand {
-            color: #777;
-            font-size: 13px;
+            color: #D4AF37;
+            font-size: 14px;
             margin-bottom: 10px;
+            font-weight: bold;
         }
         .product-card .desc {
-            color: #555;
+            color: #ddd;
             font-size: 14px;
             height: 40px;
             margin-bottom: 15px;
+            line-height: 1.4;
         }
         .price {
-            color: #8B0000; /* لمسة باللون الأحمر الفاخر */
-            font-size: 24px;
+            color: #ff3344; /* أحمر فاقع جاذب للعين */
+            font-size: 26px;
             font-weight: bold;
             margin: 15px 0;
+            text-shadow: 0 0 5px rgba(255,51,68,0.3);
         }
         .btn-whatsapp {
             display: block;
@@ -155,19 +166,21 @@
             border-radius: 6px;
             font-weight: bold;
             font-size: 15px;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
         }
         .btn-whatsapp:hover {
             background-color: #128C7E;
+            transform: scale(1.02);
         }
 
         /* الفوتر / اتصل بنا */
         .footer {
-            background-color: #0b1d3a;
+            background-color: #040c1a;
             color: #ffffff;
             text-align: center;
-            padding: 40px 20px;
-            border-top: 5px solid #D4AF37;
+            padding: 40px 20px 80px 20px; /* مساحة فالسفل للزر العائم */
+            border-top: 4px solid #D4AF37;
         }
         .footer h2 {
             color: #D4AF37;
@@ -176,12 +189,12 @@
         .footer p {
             max-width: 600px;
             margin: 10px auto 20px auto;
-            color: #ddd;
+            color: #ccc;
         }
         .footer-btn {
             display: inline-block;
             background-color: #D4AF37;
-            color: #0b1d3a;
+            color: #071326;
             padding: 14px 35px;
             border-radius: 6px;
             font-weight: bold;
@@ -192,9 +205,41 @@
         .footer-btn:hover {
             background-color: #f1c40f;
         }
+
+        /* ----------------------------------- */
+        /* تصميم زر الواتساب العائم فجنب الشاشة */
+        /* ----------------------------------- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25D366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.5);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
+
+    <!-- زر الواتساب العائم فجنب الشاشة -->
+    <a href="https://wa.me/212675237323?text=السلام%20عليكم،%20أريد%20الاستفسار%20عن%20العطور" class="whatsapp-float" target="_blank" title="تواصل معنا على الواتساب">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <!-- قسم الهيدر -->
     <div class="header">
@@ -236,7 +281,7 @@
             <div class="brand">French Avenue</div>
             <div class="desc">عطر فاخر ورائع بلمسات خشبية ودافئة تعكس الثقة والجاذبية.</div>
             <div class="price">325 DH</div>
-            <a href="https://wa.me/?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Vulcan%20Feu" class="btn-whatsapp" target="_blank">اطلب الآن عبر الواتساب</a>
+            <a href="https://wa.me/212675237323?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Vulcan%20Feu" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> اطلب الآن عبر الواتساب</a>
         </div>
 
         <!-- العطر 2 -->
@@ -246,7 +291,7 @@
             <div class="brand">Lattafa Pride</div>
             <div class="desc">تركيبة فريدة وجذابة تجمع بين الفخامة والروائح الساحرة.</div>
             <div class="price">330 DH</div>
-            <a href="https://wa.me/?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Art%20of%20Universe" class="btn-whatsapp" target="_blank">اطلب الآن عبر الواتساب</a>
+            <a href="https://wa.me/212675237323?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Art%20of%20Universe" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> اطلب الآن عبر الواتساب</a>
         </div>
 
         <!-- العطر 3 -->
@@ -256,7 +301,7 @@
             <div class="brand">Armaf</div>
             <div class="desc">العطر الأكثر شهرة وطلباً، فوحان قوي وثبات ممتاز طوال اليوم.</div>
             <div class="price">350 DH</div>
-            <a href="https://wa.me/?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Club%20de%20Nuit%20Intense" class="btn-whatsapp" target="_blank">اطلب الآن عبر الواتساب</a>
+            <a href="https://wa.me/212675237323?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Club%20de%20Nuit%20Intense" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> اطلب الآن عبر الواتساب</a>
         </div>
 
         <!-- العطر 4 -->
@@ -266,7 +311,7 @@
             <div class="brand">Lattafa</div>
             <div class="desc">رائحة القهوة والفانيليا الدافئة، مثالي للمناسبات والأوقات الخاصة.</div>
             <div class="price">320 DH</div>
-            <a href="https://wa.me/?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Khamrah%20Qahwa" class="btn-whatsapp" target="_blank">اطلب الآن عبر الواتساب</a>
+            <a href="https://wa.me/212675237323?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Khamrah%20Qahwa" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> اطلب الآن عبر الواتساب</a>
         </div>
 
         <!-- العطر 5 -->
@@ -276,7 +321,7 @@
             <div class="brand">French Avenue</div>
             <div class="desc">مزيج من التوابل والأخشاب الفاخرة لأصحاب الذوق الرفيع.</div>
             <div class="price">340 DH</div>
-            <a href="https://wa.me/?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Liquid%20Brun" class="btn-whatsapp" target="_blank">اطلب الآن عبر الواتساب</a>
+            <a href="https://wa.me/212675237323?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Liquid%20Brun" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> اطلب الآن عبر الواتساب</a>
         </div>
 
         <!-- العطر 6 -->
@@ -286,7 +331,7 @@
             <div class="brand">Lattafa Pride</div>
             <div class="desc">عطر فخم بلمسات منعشة وراقية تناسب الاستعمال اليومي والسمرات.</div>
             <div class="price">310 DH</div>
-            <a href="https://wa.me/?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Shaheen%20Gold" class="btn-whatsapp" target="_blank">اطلب الآن عبر الواتساب</a>
+            <a href="https://wa.me/212675237323?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Shaheen%20Gold" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> اطلب الآن عبر الواتساب</a>
         </div>
 
     </div>
@@ -295,7 +340,7 @@
     <div class="footer">
         <h2>تواصل معنا مباشرة</h2>
         <p>هل لديك أي استفسار أو تجد صعوبة في اختيار العطر المناسب لك؟ فريقنا جاهز لإجابتك ومساعدتك فوراً عبر الواتساب.</p>
-        <a href="https://wa.me/?text=السلام%20عليكم،%20عندي%20استفسار%20حول%20العطور" class="footer-btn" target="_blank">تواصل معنا الآن على الواتساب</a>
+        <a href="https://wa.me/212675237323?text=السلام%20عليكم،%20عندي%20استفسار%20حول%20العطور" class="footer-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i> تواصل معنا الآن على الواتساب</a>
         <p style="margin-top: 30px; font-size: 13px; color: #888;">© 2026 Or d'eau FRAGRANCES. جميع الحقوق محفوظة.</p>
     </div>
 
