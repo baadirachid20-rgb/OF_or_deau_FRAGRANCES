@@ -1,1 +1,268 @@
-bia ima anwa alotor
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OR D'EAU FRAGRANCES | Luxury in Every Spray</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --gold: #c5a059;
+            --gold-light: #e8d098;
+            --black: #111111;
+            --dark-gray: #222222;
+            --white: #ffffff;
+            --beige: #f9f6f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--beige);
+            color: var(--black);
+            line-height: 1.6;
+        }
+
+        .top-badge {
+            background-color: var(--gold-light);
+            color: var(--black);
+            text-align: center;
+            padding: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .hero-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 50px;
+            color: var(--gold);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .hero-subtitle {
+            font-size: 22px;
+            color: var(--gold-light);
+            margin-bottom: 10px;
+        }
+
+        .hero-vibes {
+            font-size: 18px;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .trust-box {
+            background-color: var(--black);
+            color: var(--white);
+            max-width: 400px;
+            margin: -30px auto 40px;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 10;
+        }
+
+        .trust-box i {
+            font-size: 40px;
+            color: var(--gold);
+        }
+
+        .trust-box-text h3 {
+            font-size: 20px;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .trust-box-text p {
+            font-size: 16px;
+            color: var(--gold-light);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .feature-item i {
+            font-size: 35px;
+            color: var(--white);
+            background-color: var(--black);
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .feature-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .feature-item p {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .action-footer {
+            background-color: var(--white);
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 2px solid #ddd;
+            margin-top: 40px;
+            gap: 20px;
+        }
+
+        .footer-brand h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 900;
+        }
+        
+        .footer-brand p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .delivery-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .delivery-info i {
+            font-size: 24px;
+            color: var(--gold);
+        }
+
+        .btn-shop {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--black);
+        }
+
+        .btn-shop:hover {
+            background-color: var(--gold);
+            color: var(--black);
+            border-color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-badge">
+        <i class="fa-solid fa-check-circle"></i>
+        100% ORIGINAL PRODUCTS
+    </div>
+
+    <div class="hero">
+        <div class="hero-logo">OF</div>
+        <h1 class="hero-title">OR D'EAU FRAGRANCES</h1>
+        <h2 class="hero-subtitle">Luxury in Every Spray.</h2>
+        <p class="hero-vibes">Golden vibes only ✨</p>
+    </div>
+
+    <div class="trust-box">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div class="trust-box-text">
+            <h3>TI9A FLMNTOJ</h3>
+            <p>أصلي، مضمون و بجودة عالية</p>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="feature-item">
+            <i class="fa-solid fa-spray-can-sparkles"></i>
+            <h4>Long Lasting</h4>
+            <p>ثبات طويل</p>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-gem"></i>
+            <h4>Premium Quality</h4>
+            <p>جودة ممتازة</p>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-box-open"></i>
+            <h4>Luxury Packaging</h4>
+            <p>تغليف فاخر</p>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-users"></i>
+            <h4>Trusted By Our Clients</h4>
+            <p>موثوق من طرف زبائننا</p>
+        </div>
+    </div>
+
+    <div class="action-footer">
+        <div class="footer-brand">
+            <h4>OR D'EAU FRAGRANCES</h4>
+            <p>Elite Scent. Limited Stock.</p>
+        </div>
+        
+        <div class="delivery-info">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Delivery Available<br>In All Morocco 🇲🇦</span>
+        </div>
+
+        <a href="https://wa.me/212775754315" class="btn-shop" target="_blank">
+            SHOP NOW <i class="fa-solid fa-chevron-right"></i>
+        </a>
+    </div>
+
+</body>
+</html>
