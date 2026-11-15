@@ -1,348 +1,513 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Or d'eau FRAGRANCES | متجر العطور الفاخرة</title>
-    <!-- استدعاء أيقونات FontAwesome للأيقونة ديال الواتساب -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        /* خلفية الصفحة بالأزرق الملكي الفاخر */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #071326; /* أزرق ملكي داكن جاد وفخم */
-            color: #ffffff;
-        }
-        
-        /* الهيدر */
-        .header {
-            background: linear-gradient(135deg, #0b1d3a, #040c1a);
-            color: #D4AF37; /* ذهبي */
-            padding: 35px 20px;
-            text-align: center;
-            border-bottom: 4px solid #D4AF37;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-        .header h1 {
-            margin: 10px 0 5px 0;
-            font-size: 34px;
-            letter-spacing: 1.5px;
-            text-shadow: 1px 1px 3px #000;
-        }
-        .header p {
-            color: #e0e0e0;
-            font-size: 16px;
-            margin: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f6f2">
+  <meta name="description" content="اكتشف تشكيلة Or d'eau من العطور الشرقية والغربية، واطلب عطرك المفضل بسهولة عبر واتساب مع التوصيل لجميع مدن المغرب.">
+  <title>Or d'eau Fragrances | عطور تختارها بثقة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f3f6f2;
+      --white: #fbfcfa;
+      --ink: #29352d;
+      --muted: #6c786e;
+      --olive: #4b6652;
+      --olive-dark: #34483a;
+      --accent: #5d785f;
+      --sage-soft: #e3ece3;
+      --line: #e1e8e1;
+      --shadow: 0 18px 48px rgba(46, 69, 53, .09);
+      --radius: 22px;
+      --font-ar: 'Tajawal', 'Segoe UI', sans-serif;
+      --font-brand: 'Cormorant Garamond', Georgia, serif;
+    }
 
-        /* قسم الترحيب بلمسة الأحمر والذهبي */
-        .hero {
-            background-color: #4a000d; /* أحمر نبيذي فاخر */
-            border: 2px solid #D4AF37;
-            padding: 25px;
-            text-align: center;
-            margin: 25px auto;
-            max-width: 900px;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-        }
-        .hero h2 {
-            color: #D4AF37;
-            margin-top: 0;
-        }
-        .hero p {
-            color: #f0f0f0;
-            line-height: 1.7;
-            font-size: 16px;
-        }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-ar);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    .container { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
 
-        /* مميزات الشراء */
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 0 10px;
-        }
-        .feature-box {
-            background: #0b1d3a;
-            padding: 18px;
-            border-radius: 8px;
-            border: 1px solid #D4AF37;
-            border-top: 3px solid #8B0000; /* لمسة أحمر */
-            text-align: center;
-            flex: 1;
-            min-width: 250px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        }
-        .feature-box strong {
-            color: #D4AF37;
-            display: block;
-            margin-bottom: 5px;
-            font-size: 17px;
-        }
+    .announcement {
+      padding: 8px 16px;
+      background: var(--olive-dark);
+      color: #f3f6f2;
+      text-align: center;
+      font-size: 13px;
+      letter-spacing: .02em;
+    }
+    .announcement i { color: #b8cbb8; margin-inline-end: 7px; }
 
-        /* عنوان المعرض */
-        .section-title {
-            color: #D4AF37;
-            border-right: 6px solid #8B0000; /* أحمر */
-            padding-right: 15px;
-            max-width: 1100px;
-            margin: 40px auto 25px auto;
-            font-size: 26px;
-            text-shadow: 1px 1px 2px #000;
-        }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(243, 246, 242, .96);
+      border-bottom: 1px solid rgba(225, 232, 225, .92);
+      backdrop-filter: blur(14px);
+    }
+    .nav-row {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      flex: 0 0 auto;
+    }
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--accent);
+      border-radius: 50%;
+      color: var(--accent);
+      font-family: var(--font-brand);
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 1;
+      direction: ltr;
+    }
+    .brand-name { display: block; font-size: 16px; font-weight: 800; line-height: 1.15; letter-spacing: .04em; }
+    .brand-note { display: block; margin-top: 3px; color: var(--muted); font-size: 11px; }
+    .nav-links { display: flex; align-items: center; gap: clamp(14px, 2.5vw, 34px); }
+    .nav-links a {
+      text-decoration: none;
+      color: #556258;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color .2s ease;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta, .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 10px 20px;
+      border: 1px solid var(--olive);
+      border-radius: 999px;
+      background: var(--olive);
+      color: white;
+      text-decoration: none;
+      font-family: var(--font-ar);
+      font-size: 14px;
+      font-weight: 700;
+      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+    }
+    .nav-cta:hover, .button:hover { background: var(--olive-dark); box-shadow: 0 8px 20px rgba(52, 71, 58, .16); transform: translateY(-1px); }
+    .button-light { border-color: var(--line); background: transparent; color: var(--ink); }
+    .button-light:hover { background: var(--white); color: var(--ink); }
 
-        /* شبكة المنتجات */
-        .products-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-            max-width: 1100px;
-            margin: 0 auto 40px auto;
-            padding: 0 10px;
-        }
-        .product-card {
-            background: linear-gradient(180deg, #0d2245 0%, #3a0009 100%); /* مزيج الأزرق الملكي والأحمر */
-            border: 1px solid #D4AF37;
-            padding: 20px;
-            text-align: center;
-            border-radius: 12px;
-            width: 320px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .product-card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
-        }
-        .product-card img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #D4AF37;
-        }
-        .product-card h3 {
-            color: #ffffff;
-            margin: 10px 0 5px 0;
-            font-size: 20px;
-        }
-        .product-card .brand {
-            color: #D4AF37;
-            font-size: 14px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        .product-card .desc {
-            color: #ddd;
-            font-size: 14px;
-            height: 40px;
-            margin-bottom: 15px;
-            line-height: 1.4;
-        }
-        .price {
-            color: #ff3344; /* أحمر فاقع جاذب للعين */
-            font-size: 26px;
-            font-weight: bold;
-            margin: 15px 0;
-            text-shadow: 0 0 5px rgba(255,51,68,0.3);
-        }
-        .btn-whatsapp {
-            display: block;
-            background-color: #25D366;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 12px;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 15px;
-            transition: background 0.3s, transform 0.2s;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-        }
-        .btn-whatsapp:hover {
-            background-color: #128C7E;
-            transform: scale(1.02);
-        }
+    .hero { padding: clamp(42px, 7vw, 88px) 0 58px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.04fr .96fr;
+      align-items: center;
+      gap: clamp(34px, 7vw, 92px);
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--olive);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+    .eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--accent); }
+    h1, h2, h3, p { margin-top: 0; }
+    .hero h1 {
+      max-width: 590px;
+      margin: 16px 0 14px;
+      font-size: clamp(38px, 5.1vw, 67px);
+      font-weight: 800;
+      line-height: 1.18;
+      letter-spacing: -.045em;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero-copy {
+      max-width: 510px;
+      margin-bottom: 25px;
+      color: #67685f;
+      font-size: clamp(16px, 1.5vw, 19px);
+      line-height: 1.9;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-actions .button { min-height: 52px; padding-inline: 24px; }
+    .hero-visual { position: relative; min-width: 0; }
+    .hero-photo-wrap {
+      position: relative;
+      width: min(100%, 475px);
+      margin-inline: auto;
+      padding: 14px;
+      border: 1px solid #d5e0d6;
+      border-radius: 48% 48% 24px 24px;
+      background: #eaf0e9;
+      box-shadow: var(--shadow);
+    }
+    .hero-photo {
+      width: 100%;
+      height: clamp(340px, 43vw, 520px);
+      border-radius: 48% 48% 16px 16px;
+      object-fit: cover;
+      object-position: center;
+      background: #e0e8e0;
+    }
+    .photo-caption {
+      position: absolute;
+      inset-inline-start: -24px;
+      bottom: 42px;
+      max-width: 190px;
+      padding: 15px 19px;
+      border: 1px solid rgba(255,255,255,.7);
+      border-radius: 16px;
+      background: rgba(251, 252, 250, .96);
+      box-shadow: 0 12px 30px rgba(46, 69, 53, .12);
+    }
+    .photo-caption strong { display: block; font-size: 15px; }
+    .photo-caption span { color: var(--muted); font-size: 12px; }
 
-        /* الفوتر / اتصل بنا */
-        .footer {
-            background-color: #040c1a;
-            color: #ffffff;
-            text-align: center;
-            padding: 40px 20px 80px 20px; /* مساحة فالسفل للزر العائم */
-            border-top: 4px solid #D4AF37;
-        }
-        .footer h2 {
-            color: #D4AF37;
-            margin-top: 0;
-        }
-        .footer p {
-            max-width: 600px;
-            margin: 10px auto 20px auto;
-            color: #ccc;
-        }
-        .footer-btn {
-            display: inline-block;
-            background-color: #D4AF37;
-            color: #071326;
-            padding: 14px 35px;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 16px;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-        .footer-btn:hover {
-            background-color: #f1c40f;
-        }
+    .proof-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 56px;
+      border-block: 1px solid var(--line);
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 20px 14px;
+      color: #515e54;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+    }
+    .proof-item + .proof-item { border-inline-start: 1px solid var(--line); }
+    .proof-item i { color: var(--accent); font-size: 18px; }
 
-        /* ----------------------------------- */
-        /* تصميم زر الواتساب العائم فجنب الشاشة */
-        /* ----------------------------------- */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background-color: #25D366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 12px rgba(0,0,0,0.5);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .whatsapp-float:hover {
-            background-color: #128C7E;
-            transform: scale(1.1);
-        }
-    </style>
+    .section { padding: clamp(60px, 8vw, 96px) 0; }
+    .section-heading { margin-bottom: 30px; text-align: center; }
+    .section-heading .eyebrow { justify-content: center; }
+    .section-heading h2 {
+      margin: 10px 0 8px;
+      font-size: clamp(30px, 4vw, 44px);
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -.03em;
+    }
+    .section-heading p { max-width: 580px; margin: 0 auto; color: var(--muted); font-size: 16px; }
+
+    .products-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .product-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .product-card:hover { transform: translateY(-5px); border-color: #cedbce; box-shadow: var(--shadow); }
+    .product-image-wrap { position: relative; overflow: hidden; background: #e9efe9; }
+    .product-image {
+      width: 100%;
+      aspect-ratio: 1 / .84;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+    .product-card:hover .product-image { transform: scale(1.035); }
+    .product-number {
+      position: absolute;
+      top: 14px;
+      inset-inline-start: 14px;
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(255,255,255,.7);
+      border-radius: 50%;
+      background: rgba(251,252,250,.94);
+      color: var(--olive);
+      font-family: var(--font-brand);
+      font-size: 17px;
+      font-weight: 700;
+    }
+    .product-content { padding: 20px; }
+    .product-brand { margin-bottom: 3px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .product-title-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+    .product-title-row h3 { margin: 0; font-size: 20px; font-weight: 800; line-height: 1.3; }
+    .price { flex: 0 0 auto; color: var(--olive); font-size: 19px; font-weight: 800; direction: ltr; }
+    .product-desc { min-height: 54px; margin: 9px 0 17px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .product-order { width: 100%; min-height: 46px; border-color: #dce6dc; background: #edf2ed; color: var(--olive-dark); }
+    .product-order:hover { border-color: var(--olive); background: var(--olive); color: white; }
+    .catalog-note { margin: 20px 0 0; color: var(--muted); font-size: 12px; text-align: center; }
+
+    .benefits { background: #e9efe8; }
+    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 32px; }
+    .benefit {
+      padding: 25px;
+      border: 1px solid rgba(93,120,95,.18);
+      border-radius: 18px;
+      background: rgba(251,252,250,.84);
+      text-align: center;
+    }
+    .benefit-icon {
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 13px;
+      border-radius: 50%;
+      background: var(--sage-soft);
+      color: var(--olive-dark);
+      font-size: 20px;
+    }
+    .benefit h3 { margin-bottom: 5px; font-size: 17px; font-weight: 800; }
+    .benefit p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .contact-section { padding: 72px 0; }
+    .contact-card {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      padding: clamp(26px, 5vw, 54px);
+      border-radius: 28px;
+      background: var(--sage-soft);
+      color: var(--ink);
+    }
+    .contact-card::after {
+      content: 'OF';
+      position: absolute;
+      inset-inline-end: 24%;
+      bottom: -105px;
+      color: rgba(75,102,82,.06);
+      font-family: var(--font-brand);
+      font-size: 260px;
+      font-weight: 700;
+      line-height: 1;
+      direction: ltr;
+      pointer-events: none;
+    }
+    .contact-copy, .contact-actions { position: relative; z-index: 1; }
+    .contact-copy .eyebrow { color: var(--olive); }
+    .contact-copy h2 { max-width: 600px; margin: 10px 0; font-size: clamp(28px, 4vw, 42px); line-height: 1.25; }
+    .contact-copy p { max-width: 560px; margin: 0; color: var(--muted); }
+    .contact-actions .button { border-color: white; background: white; color: var(--olive-dark); white-space: nowrap; }
+    .contact-actions .button:hover { background: var(--sage-soft); border-color: var(--sage-soft); }
+    .site-footer { padding: 24px 0; color: var(--muted); font-size: 12px; text-align: center; }
+    .whatsapp-float {
+      position: fixed;
+      z-index: 30;
+      inset-inline-end: 22px;
+      bottom: max(20px, env(safe-area-inset-bottom));
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      border: 2px solid white;
+      border-radius: 50%;
+      background: #557b5c;
+      box-shadow: 0 8px 24px rgba(57, 95, 65, .22);
+      color: white;
+      font-size: 25px;
+      text-decoration: none;
+      transition: transform .2s ease, background .2s ease;
+    }
+    .whatsapp-float:hover { transform: translateY(-3px); background: #3f6647; }
+
+    @media (max-width: 900px) {
+      .nav-row { flex-wrap: wrap; padding-block: 12px; }
+      .nav-links { order: 3; width: 100%; justify-content: center; padding-top: 4px; }
+      .hero-grid { grid-template-columns: 1fr .88fr; gap: 30px; }
+      .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .photo-caption { inset-inline-start: -10px; }
+    }
+    @media (max-width: 640px) {
+      .container { width: min(100% - 28px, 520px); }
+      .announcement { font-size: 11px; }
+      .nav-row { min-height: auto; gap: 10px; }
+      .brand-mark { width: 38px; height: 38px; }
+      .brand-name { font-size: 14px; }
+      .nav-cta { min-height: 42px; padding: 8px 13px; font-size: 12px; }
+      .nav-links { justify-content: space-between; gap: 8px; overflow-x: auto; white-space: nowrap; }
+      .nav-links a { font-size: 12px; }
+      .hero { padding-top: 36px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 30px; }
+      .hero-copy { margin-bottom: 20px; }
+      .hero-actions { display: grid; grid-template-columns: 1fr 1fr; }
+      .hero-actions .button { min-height: 48px; padding-inline: 12px; font-size: 13px; }
+      .hero-photo-wrap { width: min(100%, 390px); padding: 9px; }
+      .hero-photo { height: 355px; }
+      .photo-caption { inset-inline-start: 0; bottom: 25px; }
+      .proof-strip { grid-template-columns: 1fr; margin-top: 38px; }
+      .proof-item { justify-content: flex-start; padding: 13px 8px; text-align: right; }
+      .proof-item + .proof-item { border-inline-start: 0; border-top: 1px solid var(--line); }
+      .section { padding-block: 60px; }
+      .products-grid { gap: 12px; }
+      .product-content { padding: 14px; }
+      .product-title-row { align-items: flex-start; flex-direction: column; gap: 2px; }
+      .product-title-row h3 { font-size: 17px; }
+      .price { font-size: 17px; }
+      .product-desc { min-height: 76px; font-size: 12px; }
+      .product-order { padding-inline: 8px; font-size: 12px; }
+      .benefits-grid { grid-template-columns: 1fr; gap: 12px; }
+      .benefit { padding: 20px; }
+      .contact-card { align-items: flex-start; flex-direction: column; }
+      .contact-actions { width: 100%; }
+      .contact-actions .button { width: 100%; }
+      .whatsapp-float { inset-inline-end: 14px; width: 50px; height: 50px; }
+    }
+    @media (max-width: 380px) {
+      .container { width: calc(100% - 24px); }
+      .brand-note { display: none; }
+      .nav-cta { padding-inline: 10px; }
+      .hero-actions { grid-template-columns: 1fr; }
+      .products-grid { grid-template-columns: 1fr; }
+      .product-title-row { align-items: baseline; flex-direction: row; }
+      .product-desc { min-height: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
 </head>
 <body>
+  <div class="announcement"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i> التوصيل لجميع المدن المغربية <span aria-hidden="true">·</span> الدفع عند الاستلام</div>
 
-    <!-- زر الواتساب العائم فجنب الشاشة -->
-    <a href="https://wa.me/212775754315?text=السلام%20عليكم،%20أريد%20الاستفسار%20عن%20العطور" class="whatsapp-float" target="_blank" title="تواصل معنا على الواتساب">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <!-- قسم الهيدر -->
-    <div class="header">
-        <h1>Or d'eau FRAGRANCES</h1>
-        <p>الجاذبية، الفخامة، والتميز في عالم العطور</p>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="#accueil" aria-label="Or d'eau Fragrances - الصفحة الرئيسية">
+        <span class="brand-mark" aria-hidden="true">OF</span>
+        <span><span class="brand-name">OR D'EAU FRAGRANCES</span><span class="brand-note">عطور مختارة بعناية</span></span>
+      </a>
+      <nav class="nav-links" aria-label="التنقل الرئيسي">
+        <a href="#accueil">الرئيسية</a>
+        <a href="#collection">العطور</a>
+        <a href="#avantages">لماذا نحن</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
+      <a class="nav-cta" href="https://wa.me/212775754315?text=Salam%2C%20bghit%20n3ref%20l3orod%20dyalkom" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> اطلب عبر واتساب</a>
     </div>
+  </header>
 
-    <!-- قسم الترحيب -->
-    <div class="hero">
-        <h2>مرحباً بك في متجر Or d'eau</h2>
-        <p>نقدم لك تشكيلة راقية ومختارة من أفضل العطور الشرقية والغربية الأكثر طلباً، لترتقي بأناقتك وتمنحك حضوراً يستحيل نسيانه. جميع عطورنا مضمونة وثابتة تدوم طويلاً.</p>
-    </div>
-
-    <!-- مميزات الشراء -->
-    <div class="features">
-        <div class="feature-box">
-            <strong>🚚 التوصيل لجميع المدن</strong>
-            توصيل سريع ومضمون حتى باب منزلكم
+  <main>
+    <section class="hero" id="accueil">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy-wrap">
+            <span class="eyebrow">OR D'EAU · عطور فاخرة</span>
+            <h1>عطر يعبّر عليك،<br><span>ويبقى فالبال.</span></h1>
+            <p class="hero-copy">اكتشف عطوراً شرقية وغربية مختارة بعناية، بروائح كتكمّل حضورك فكل مناسبة. اختار عطرك وطلبو مباشرة عبر واتساب.</p>
+            <div class="hero-actions">
+              <a class="button" href="#collection">اكتشف التشكيلة <i class="fa-solid fa-arrow-left" aria-hidden="true"></i></a>
+              <a class="button button-light" href="https://wa.me/212775754315?text=Salam%2C%20bghit%20nsta3lem%203la%20l3otor" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> تواصل معنا</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-photo-wrap">
+              <img class="hero-photo" src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1100&q=85" alt="زجاجة عطر بتصميم أنيق" fetchpriority="high">
+            </div>
+            <div class="photo-caption"><strong>اختيارك، بطابعك</strong><span>تشكيلة للذوق الرفيع</span></div>
+          </div>
         </div>
-        <div class="feature-box">
-            <strong>💵 الدفع عند الاستلام</strong>
-            لا تدفع شيئاً حتى تستلم طلبك وتتفحصه
+        <div class="proof-strip" aria-label="مميزات التسوق">
+          <div class="proof-item"><i class="fa-solid fa-spray-can-sparkles" aria-hidden="true"></i><span>عطور شرقية وغربية مختارة</span></div>
+          <div class="proof-item"><i class="fa-solid fa-box-open" aria-hidden="true"></i><span>الدفع عند الاستلام</span></div>
+          <div class="proof-item"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>توصيل لجميع مدن المغرب</span></div>
         </div>
-        <div class="feature-box">
-            <strong>✨ جودة وثبات ممتاز</strong>
-            عطور أصلية ومميزة برائحة تدوم طويلاً
+      </div>
+    </section>
+
+    <section class="section" id="collection">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">تشكيلة OR D'EAU</span>
+          <h2>عطور تستاهل تكون اختيارك</h2>
+          <p>روائح مميزة وأثمنة واضحة. ضغط على “طلب عبر واتساب” باش تسول أو تطلب عطرك مباشرة.</p>
         </div>
-    </div>
-
-    <h2 class="section-title">أفخم العطور المختارة (300 - 350 درهم)</h2>
-
-    <!-- شبكة المنتجات الستة -->
-    <div class="products-grid">
-
-        <!-- العطر 1 -->
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=500" alt="Vulcan Feu">
-            <h3>Vulcan Feu</h3>
-            <div class="brand">French Avenue</div>
-            <div class="desc">عطر فاخر ورائع بلمسات خشبية ودافئة تعكس الثقة والجاذبية.</div>
-            <div class="price">325 DH</div>
-            <a href="https://wa.me/212775754315?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Vulcan%20Feu" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> اطلب الآن عبر الواتساب</a>
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="product-image-wrap"><img class="product-image" src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=900&q=80" alt="عطر Vulcan Feu" loading="lazy"><span class="product-number">01</span></div>
+            <div class="product-content"><div class="product-brand">FRENCH AVENUE</div><div class="product-title-row"><h3>Vulcan Feu</h3><span class="price">325 DH</span></div><p class="product-desc">نفحات خشبية ودافئة تعطيك حضوراً واثقاً ومميزاً.</p><a class="button product-order" href="https://wa.me/212775754315?text=Salam%2C%20bghit%20ntleb%20Vulcan%20Feu" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> طلب عبر واتساب</a></div>
+          </article>
+          <article class="product-card">
+            <div class="product-image-wrap"><img class="product-image" src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=900&q=80" alt="عطر Art of Universe" loading="lazy"><span class="product-number">02</span></div>
+            <div class="product-content"><div class="product-brand">LATTAFA PRIDE</div><div class="product-title-row"><h3>Art of Universe</h3><span class="price">330 DH</span></div><p class="product-desc">تركيبة جذابة تجمع بين الطابع العصري ولمسة الفخامة.</p><a class="button product-order" href="https://wa.me/212775754315?text=Salam%2C%20bghit%20ntleb%20Art%20of%20Universe" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> طلب عبر واتساب</a></div>
+          </article>
+          <article class="product-card">
+            <div class="product-image-wrap"><img class="product-image" src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=900&q=80" alt="عطر Club de Nuit Intense" loading="lazy"><span class="product-number">03</span></div>
+            <div class="product-content"><div class="product-brand">ARMAF</div><div class="product-title-row"><h3>Club de Nuit Intense</h3><span class="price">350 DH</span></div><p class="product-desc">عطر معروف بفوحانه القوي وثباته طوال اليوم.</p><a class="button product-order" href="https://wa.me/212775754315?text=Salam%2C%20bghit%20ntleb%20Club%20de%20Nuit%20Intense" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> طلب عبر واتساب</a></div>
+          </article>
+          <article class="product-card">
+            <div class="product-image-wrap"><img class="product-image" src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=900&q=80" alt="عطر Khamrah Qahwa" loading="lazy"><span class="product-number">04</span></div>
+            <div class="product-content"><div class="product-brand">LATTAFA</div><div class="product-title-row"><h3>Khamrah Qahwa</h3><span class="price">320 DH</span></div><p class="product-desc">قهوة وفانيليا بنفحات دافئة للمناسبات والأوقات الخاصة.</p><a class="button product-order" href="https://wa.me/212775754315?text=Salam%2C%20bghit%20ntleb%20Khamrah%20Qahwa" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> طلب عبر واتساب</a></div>
+          </article>
+          <article class="product-card">
+            <div class="product-image-wrap"><img class="product-image" src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=900&q=80" alt="عطر Liquid Brun" loading="lazy"><span class="product-number">05</span></div>
+            <div class="product-content"><div class="product-brand">FRENCH AVENUE</div><div class="product-title-row"><h3>Liquid Brun</h3><span class="price">340 DH</span></div><p class="product-desc">مزيج من التوابل والأخشاب لعشاق الروائح الغنية.</p><a class="button product-order" href="https://wa.me/212775754315?text=Salam%2C%20bghit%20ntleb%20Liquid%20Brun" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> طلب عبر واتساب</a></div>
+          </article>
+          <article class="product-card">
+            <div class="product-image-wrap"><img class="product-image" src="https://images.unsplash.com/photo-1615397349754-cfa2066a298e?auto=format&fit=crop&w=900&q=80" alt="عطر Shaheen Gold" loading="lazy"><span class="product-number">06</span></div>
+            <div class="product-content"><div class="product-brand">LATTAFA PRIDE</div><div class="product-title-row"><h3>Shaheen Gold</h3><span class="price">310 DH</span></div><p class="product-desc">نفحات منعشة وراقية تناسب اليومي والسهرات.</p><a class="button product-order" href="https://wa.me/212775754315?text=Salam%2C%20bghit%20ntleb%20Shaheen%20Gold" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> طلب عبر واتساب</a></div>
+          </article>
         </div>
+        <p class="catalog-note">الأثمنة بالدرهم المغربي. تواصل معنا لتأكيد التوفر ومعلومات الطلب.</p>
+      </div>
+    </section>
 
-        <!-- العطر 2 -->
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=500" alt="Art of Universe">
-            <h3>Art of Universe</h3>
-            <div class="brand">Lattafa Pride</div>
-            <div class="desc">تركيبة فريدة وجذابة تجمع بين الفخامة والروائح الساحرة.</div>
-            <div class="price">330 DH</div>
-            <a href="https://wa.me/212775754315?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Art%20of%20Universe" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> اطلب الآن عبر الواتساب</a>
+    <section class="section benefits" id="avantages">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">تجربة سهلة وواضحة</span>
+          <h2>من الاختيار حتى لباب دارك</h2>
+          <p>تسوق براحتك، وسولنا على العطر اللي مناسب لذوقك.</p>
         </div>
-
-        <!-- العطر 3 -->
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=500" alt="Club de Nuit Intense">
-            <h3>Club de Nuit Intense</h3>
-            <div class="brand">Armaf</div>
-            <div class="desc">العطر الأكثر شهرة وطلباً، فوحان قوي وثبات ممتاز طوال اليوم.</div>
-            <div class="price">350 DH</div>
-            <a href="https://wa.me/212775754315?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Club%20de%20Nuit%20Intense" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> اطلب الآن عبر الواتساب</a>
+        <div class="benefits-grid">
+          <article class="benefit"><span class="benefit-icon"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i></span><h3>التوصيل للمغرب كامل</h3><p>نوصلو الطلبات لجميع المدن المغربية.</p></article>
+          <article class="benefit"><span class="benefit-icon"><i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i></span><h3>الدفع عند الاستلام</h3><p>خلص ملي يوصلك الطلب.</p></article>
+          <article class="benefit"><span class="benefit-icon"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span><h3>طلب مباشر وسهل</h3><p>تواصل معنا عبر واتساب لأي سؤال أو طلب.</p></article>
         </div>
+      </div>
+    </section>
 
-        <!-- العطر 4 -->
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=500" alt="Khamrah Qahwa">
-            <h3>Khamrah Qahwa</h3>
-            <div class="brand">Lattafa</div>
-            <div class="desc">رائحة القهوة والفانيليا الدافئة، مثالي للمناسبات والأوقات الخاصة.</div>
-            <div class="price">320 DH</div>
-            <a href="https://wa.me/212775754315?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Khamrah%20Qahwa" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> اطلب الآن عبر الواتساب</a>
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-copy"><span class="eyebrow">حنا هنا نعاونوك</span><h2>مازال محتار فاختيار العطر؟</h2><p>راسلنا ونعاونوك تلقى الرائحة اللي كتناسبك، ونتأكدو ليك من التوفر والتوصيل.</p></div>
+          <div class="contact-actions"><a class="button" href="https://wa.me/212775754315?text=Salam%2C%20bghit%20nsta3lem%203la%20l3otor" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> تواصل معنا دابا</a></div>
         </div>
+      </div>
+    </section>
+  </main>
 
-        <!-- العطر 5 -->
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500" alt="Liquid Brun">
-            <h3>Liquid Brun</h3>
-            <div class="brand">French Avenue</div>
-            <div class="desc">مزيج من التوابل والأخشاب الفاخرة لأصحاب الذوق الرفيع.</div>
-            <div class="price">340 DH</div>
-            <a href="https://wa.me/212775754315?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Liquid%20Brun" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> اطلب الآن عبر الواتساب</a>
-        </div>
-
-        <!-- العطر 6 -->
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1615397349754-cfa2066a298e?w=500" alt="Shaheen Gold">
-            <h3>Shaheen Gold</h3>
-            <div class="brand">Lattafa Pride</div>
-            <div class="desc">عطر فخم بلمسات منعشة وراقية تناسب الاستعمال اليومي والسمرات.</div>
-            <div class="price">310 DH</div>
-            <a href="https://wa.me/212775754315?text=السلام%20عليكم،%20بغيت%20نطلب%20عطر%20Shaheen%20Gold" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> اطلب الآن عبر الواتساب</a>
-        </div>
-
-    </div>
-
-    <!-- قسم الفوتر والاتصال -->
-    <div class="footer">
-        <h2>تواصل معنا مباشرة</h2>
-        <p>هل لديك أي استفسار أو تجد صعوبة في اختيار العطر المناسب لك؟ فريقنا جاهز لإجابتك ومساعدتك فوراً عبر الواتساب.</p>
-        <a href="https://wa.me/212775754315?text=السلام%20عليكم،%20عندي%20استفسار%20حول%20العطور" class="footer-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i> تواصل معنا الآن على الواتساب</a>
-        <p style="margin-top: 30px; font-size: 13px; color: #888;">© 2026 Or d'eau FRAGRANCES. جميع الحقوق محفوظة.</p>
-    </div>
-
+  <footer class="site-footer"><div class="container">© 2026 Or d'eau Fragrances · جميع الحقوق محفوظة</div></footer>
+  <a class="whatsapp-float" href="https://wa.me/212775754315?text=Salam%2C%20bghit%20nsta3lem%203la%20l3otor" target="_blank" rel="noopener noreferrer" aria-label="تواصل معنا عبر واتساب"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
 </body>
 </html>
